@@ -142,6 +142,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/previous_btn"
                 app:layout_constraintTop_toTopOf="parent" >
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
