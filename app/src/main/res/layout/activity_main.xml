@@ -30,11 +30,13 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:elevation="20dp"
-        app:cardElevation="20dp"
         app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,54 +45,6 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="60dp"
-                android:clickable="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.301"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/baseline_skip_previous_24" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="60dp"
-                android:clickable="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.692"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/baseline_skip_next_24" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="60dp"
-                android:clickable="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.095"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/baseline_shuffle_24" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="60dp"
-                android:clickable="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.901"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/baseline_pause_presentation_24" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -106,21 +60,90 @@
                 app:layout_constraintVertical_bias="0.088" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton"
-                android:layout_width="53dp"
-                android:layout_height="73dp"
+                android:id="@+id/play_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="60dp"
-                android:backgroundTint="#8a3f43"
-                android:clickable="true"
+                android:backgroundTint="#96553f"
+                android:src="@drawable/playarrow"
+                android:tint="@color/white"
                 app:borderWidth="0dp"
-                app:elevation="50dp"
+                app:elevation="30dp"
+                app:fabSize="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" >
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/next_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="#212020"
+                android:src="@drawable/nextarrow"
+                android:tint="@color/white"
+                app:borderWidth="0dp"
+                app:elevation="30dp"
                 app:fabSize="mini"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/baseline_play_arrow_24"
-                app:tint="@color/white" />
+                app:layout_constraintStart_toEndOf="@id/play_btn"
+                app:layout_constraintTop_toTopOf="parent" >
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/stop_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="#212020"
+                android:src="@drawable/stop"
+                android:tint="@color/white"
+                app:borderWidth="0dp"
+                app:elevation="30dp"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/next_btn"
+                app:layout_constraintTop_toTopOf="parent" >
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/previous_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="#212020"
+                android:src="@drawable/previousarrow"
+                android:tint="@color/white"
+                app:borderWidth="0dp"
+                app:elevation="30dp"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/play_btn"
+                app:layout_constraintTop_toTopOf="parent" >
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/shuffle_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="#212020"
+                android:src="@drawable/shuffle"
+                android:tint="@color/white"
+                app:borderWidth="0dp"
+                app:elevation="30dp"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/previous_btn"
+                app:layout_constraintTop_toTopOf="parent" >
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 

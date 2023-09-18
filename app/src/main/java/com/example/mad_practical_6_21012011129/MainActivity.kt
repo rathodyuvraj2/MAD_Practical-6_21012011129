@@ -10,12 +10,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val Play : Button=findViewById(R.id.floatingActionButton)
+
+        val Play : Button=findViewById(R.id.play_btn)
 
         Play.setOnClickListener {
             PlayPause()
         }
-        val Pause : Button=findViewById(R.id.floatingActionButton2)
+        val Pause : Button=findViewById(R.id.stop_btn)
 
         Pause.setOnClickListener {
             Stop()
@@ -35,8 +36,4 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-
-
-
 }
